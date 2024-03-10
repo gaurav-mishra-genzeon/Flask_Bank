@@ -24,7 +24,7 @@
             max-width: 400px;
             width: 100%;
         }
-        input[type="text"],
+        input[type="email"],
         input[type="password"],
         input[type="submit"] {
             width: 100%;
@@ -56,11 +56,11 @@
         <h2>Welcome to Flask Bank</h2>
         <h3>Login</h3>
         <form action="/login" method="post">
-            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
             <input type="password" name="password" placeholder="Password" required><br>
             <input type="submit" value="Login">
         </form>
-        <a href="{{url_for('register')}}" class="signup-link">Don't have an account? Sign up here.</a>
+        <a href="/register" class="signup-link">Don't have an account? Sign up here.</a>
     </div>
 </body>
 </html>
