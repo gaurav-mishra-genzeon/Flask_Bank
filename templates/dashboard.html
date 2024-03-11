@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,5 +14,39 @@
     <a href="/logout">Logout</a>
 
 
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ user.name }}!</h1>
+    <p>Your current balance: Rs.{{ user.balance }}</p>
+    
+    <h2>Deposit</h2>
+    <form action="/deposit" method="post">
+        <input type="number" name="amount" placeholder="Enter amount" step="0.01" required>
+        <button type="submit">Deposit</button>
+    </form>
+
+    <h2>Withdraw</h2>
+    <form action="/withdraw" method="post">
+        <input type="number" name="amount" placeholder="Enter amount" step="0.01" required>
+        <button type="submit">Withdraw</button>
+    </form>
+
+    <h2>Change Password</h2>
+    <form action="/change_password" method="post">
+        <input type="password" name="old_password" placeholder="Enter old password" required>
+        <input type="password" name="new_password" placeholder="Enter new password" required>
+        <button type="submit">Change Password</button>
+    </form>
+
+    <a href="/logout">Logout</a>
 </body>
 </html>

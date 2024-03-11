@@ -52,7 +52,13 @@
     </style>
 </head>
 <body>
-    <div class="container">
+   
+ <div class="container">
+         {% for message in get_flashed_messages()%}
+         <div>
+            alert({{message}})
+         </div>
+         {% endfor %}
         <h2>Welcome to Flask Bank</h2>
         <h3>Create Account</h3>
         <form action="/register" method="post">
@@ -64,6 +70,7 @@
         </form>
         <a href="/login" class="signup-link">Already have an account? Login here.</a>
     </div>
+
 </body>
 </html>
 
